@@ -1,0 +1,239 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x24ab040 .scope module, "stimulus" "stimulus" 2 47;
+ .timescale 0 0;
+v0x24e2550_0 .var "a", 0 0;
+v0x24e27b0_0 .var "ainv", 0 0;
+v0x24e2880_0 .var "b", 0 0;
+v0x24e2950_0 .var "binv", 0 0;
+v0x24e2a20_0 .var "carryin", 0 0;
+v0x24e2af0_0 .net "carryout", 0 0, L_0x24e3240; 1 drivers
+v0x24e2bc0_0 .var "operation", 1 0;
+v0x24e2c90_0 .net "result", 0 0, L_0x24e4930; 1 drivers
+v0x24e2db0_0 .net "sgt", 0 0, L_0x24e4b20; 1 drivers
+v0x24e2e30_0 .net "zero", 0 0, L_0x24e47e0; 1 drivers
+S_0x24aaab0 .scope module, "uut" "onebitalu" 2 76, 2 24, S_0x24ab040;
+ .timescale 0 0;
+L_0x24e3550 .functor NOT 1, v0x24e2550_0, C4<0>, C4<0>, C4<0>;
+L_0x24e38f0 .functor NOT 1, v0x24e2880_0, C4<0>, C4<0>, C4<0>;
+L_0x24e47e0 .functor NOT 1, L_0x24e4930, C4<0>, C4<0>, C4<0>;
+L_0x24e4ac0 .functor NOT 1, v0x24e2880_0, C4<0>, C4<0>, C4<0>;
+L_0x24e4b20 .functor AND 1, v0x24e2550_0, L_0x24e4ac0, C4<1>, C4<1>;
+L_0x24e4bd0 .functor AND 1, L_0x24e34a0, L_0x24e3840, C4<1>, C4<1>;
+L_0x24e4c70 .functor OR 1, L_0x24e34a0, L_0x24e3840, C4<0>, C4<0>;
+v0x24e1bd0_0 .net "A", 0 0, L_0x24e34a0; 1 drivers
+v0x24e1cc0_0 .net "B", 0 0, L_0x24e3840; 1 drivers
+v0x24e1d90_0 .net *"_s6", 0 0, L_0x24e4ac0; 1 drivers
+v0x24e1e30_0 .net "a", 0 0, v0x24e2550_0; 1 drivers
+v0x24e1eb0_0 .net "a_and_b", 0 0, L_0x24e4bd0; 1 drivers
+v0x24e1f30_0 .net "a_or_b", 0 0, L_0x24e4c70; 1 drivers
+v0x24e1fb0_0 .net "ainv", 0 0, v0x24e27b0_0; 1 drivers
+v0x24e2060_0 .net "b", 0 0, v0x24e2880_0; 1 drivers
+v0x24e2160_0 .net "binv", 0 0, v0x24e2950_0; 1 drivers
+v0x24e2210_0 .net "carryin", 0 0, v0x24e2a20_0; 1 drivers
+v0x24e22c0_0 .alias "carryout", 0 0, v0x24e2af0_0;
+v0x24e2370_0 .net "operation", 1 0, v0x24e2bc0_0; 1 drivers
+v0x24e2420_0 .alias "result", 0 0, v0x24e2c90_0;
+v0x24e24d0_0 .alias "sgt", 0 0, v0x24e2db0_0;
+v0x24e25d0_0 .net "sum", 0 0, L_0x24e2f10; 1 drivers
+v0x24e2650_0 .alias "zero", 0 0, v0x24e2e30_0;
+S_0x24e1570 .scope module, "f" "fullbitadder" 2 33, 2 5, S_0x24aaab0;
+ .timescale 0 0;
+L_0x24e2eb0 .functor XOR 1, L_0x24e34a0, L_0x24e3840, C4<0>, C4<0>;
+L_0x24e2f10 .functor XOR 1, L_0x24e2eb0, v0x24e2a20_0, C4<0>, C4<0>;
+L_0x24e2f70 .functor XOR 1, L_0x24e34a0, L_0x24e3840, C4<0>, C4<0>;
+L_0x24e30f0 .functor AND 1, L_0x24e2f70, v0x24e2a20_0, C4<1>, C4<1>;
+L_0x24e31e0 .functor AND 1, L_0x24e34a0, L_0x24e3840, C4<1>, C4<1>;
+L_0x24e3240 .functor OR 1, L_0x24e30f0, L_0x24e31e0, C4<0>, C4<0>;
+v0x24e1660_0 .alias "A", 0 0, v0x24e1bd0_0;
+v0x24e1700_0 .alias "B", 0 0, v0x24e1cc0_0;
+v0x24e1780_0 .net *"_s0", 0 0, L_0x24e2eb0; 1 drivers
+v0x24e1800_0 .net *"_s4", 0 0, L_0x24e2f70; 1 drivers
+v0x24e18b0_0 .net *"_s6", 0 0, L_0x24e30f0; 1 drivers
+v0x24e1930_0 .net *"_s8", 0 0, L_0x24e31e0; 1 drivers
+v0x24e1a10_0 .alias "carryin", 0 0, v0x24e2210_0;
+v0x24e1ab0_0 .alias "carryout", 0 0, v0x24e2af0_0;
+v0x24e1b50_0 .alias "sum", 0 0, v0x24e25d0_0;
+S_0x24e0fe0 .scope module, "m1" "mux2input" 2 35, 2 12, S_0x24aaab0;
+ .timescale 0 0;
+L_0x24e32a0 .functor NOT 1, v0x24e27b0_0, C4<0>, C4<0>, C4<0>;
+L_0x24e3300 .functor AND 1, v0x24e2550_0, L_0x24e32a0, C4<1>, C4<1>;
+L_0x24e33b0 .functor AND 1, L_0x24e3550, v0x24e27b0_0, C4<1>, C4<1>;
+L_0x24e34a0 .functor OR 1, L_0x24e3300, L_0x24e33b0, C4<0>, C4<0>;
+v0x24e10d0_0 .alias "OUTPUT", 0 0, v0x24e1bd0_0;
+v0x24e1190_0 .net *"_s0", 0 0, L_0x24e32a0; 1 drivers
+v0x24e1230_0 .net *"_s2", 0 0, L_0x24e3300; 1 drivers
+v0x24e12d0_0 .net *"_s4", 0 0, L_0x24e33b0; 1 drivers
+v0x24e1350_0 .alias "signal", 0 0, v0x24e1fb0_0;
+v0x24e13f0_0 .alias "x", 0 0, v0x24e1e30_0;
+v0x24e14d0_0 .net "y", 0 0, L_0x24e3550; 1 drivers
+S_0x24e0b10 .scope module, "m2" "mux2input" 2 36, 2 12, S_0x24aaab0;
+ .timescale 0 0;
+L_0x24e3690 .functor NOT 1, v0x24e2950_0, C4<0>, C4<0>, C4<0>;
+L_0x24e36f0 .functor AND 1, v0x24e2880_0, L_0x24e3690, C4<1>, C4<1>;
+L_0x24e3750 .functor AND 1, L_0x24e38f0, v0x24e2950_0, C4<1>, C4<1>;
+L_0x24e3840 .functor OR 1, L_0x24e36f0, L_0x24e3750, C4<0>, C4<0>;
+v0x24e0920_0 .alias "OUTPUT", 0 0, v0x24e1cc0_0;
+v0x24e0c20_0 .net *"_s0", 0 0, L_0x24e3690; 1 drivers
+v0x24e0cc0_0 .net *"_s2", 0 0, L_0x24e36f0; 1 drivers
+v0x24e0d60_0 .net *"_s4", 0 0, L_0x24e3750; 1 drivers
+v0x24e0e00_0 .alias "signal", 0 0, v0x24e2160_0;
+v0x24e0ea0_0 .alias "x", 0 0, v0x24e2060_0;
+v0x24e0f40_0 .net "y", 0 0, L_0x24e38f0; 1 drivers
+S_0x24a70b0 .scope module, "M" "mux3input" 2 38, 2 18, S_0x24aaab0;
+ .timescale 0 0;
+L_0x24e3ad0 .functor NOT 1, L_0x24e3a30, C4<0>, C4<0>, C4<0>;
+L_0x24e3c60 .functor NOT 1, L_0x24e3b30, C4<0>, C4<0>, C4<0>;
+L_0x24e3cc0 .functor AND 1, L_0x24e3ad0, L_0x24e3c60, C4<1>, C4<1>;
+L_0x24e3dc0 .functor AND 1, L_0x24e3cc0, L_0x24e4bd0, C4<1>, C4<1>;
+L_0x24e4000 .functor NOT 1, L_0x24e3f60, C4<0>, C4<0>, C4<0>;
+L_0x24e40b0 .functor AND 1, L_0x24e3ec0, L_0x24e4000, C4<1>, C4<1>;
+L_0x24e41f0 .functor AND 1, L_0x24e40b0, L_0x24e4c70, C4<1>, C4<1>;
+L_0x24e42f0 .functor OR 1, L_0x24e3dc0, L_0x24e41f0, C4<0>, C4<0>;
+L_0x24e44e0 .functor NOT 1, L_0x24e4440, C4<0>, C4<0>, C4<0>;
+L_0x24e3bd0 .functor AND 1, L_0x24e44e0, L_0x24e4590, C4<1>, C4<1>;
+L_0x24e4840 .functor AND 1, L_0x24e3bd0, L_0x24e2f10, C4<1>, C4<1>;
+L_0x24e4930 .functor OR 1, L_0x24e42f0, L_0x24e4840, C4<0>, C4<0>;
+v0x24b8820_0 .alias "OUTPUT", 0 0, v0x24e2c90_0;
+v0x24dfb00_0 .net *"_s1", 0 0, L_0x24e3a30; 1 drivers
+v0x24dfba0_0 .net *"_s10", 0 0, L_0x24e3dc0; 1 drivers
+v0x24dfc40_0 .net *"_s13", 0 0, L_0x24e3ec0; 1 drivers
+v0x24dfcf0_0 .net *"_s15", 0 0, L_0x24e3f60; 1 drivers
+v0x24dfd90_0 .net *"_s16", 0 0, L_0x24e4000; 1 drivers
+v0x24dfe70_0 .net *"_s18", 0 0, L_0x24e40b0; 1 drivers
+v0x24dff10_0 .net *"_s2", 0 0, L_0x24e3ad0; 1 drivers
+v0x24e0000_0 .net *"_s20", 0 0, L_0x24e41f0; 1 drivers
+v0x24e00a0_0 .net *"_s22", 0 0, L_0x24e42f0; 1 drivers
+v0x24e01a0_0 .net *"_s25", 0 0, L_0x24e4440; 1 drivers
+v0x24e0240_0 .net *"_s26", 0 0, L_0x24e44e0; 1 drivers
+v0x24e0350_0 .net *"_s29", 0 0, L_0x24e4590; 1 drivers
+v0x24e03f0_0 .net *"_s30", 0 0, L_0x24e3bd0; 1 drivers
+v0x24e0510_0 .net *"_s32", 0 0, L_0x24e4840; 1 drivers
+v0x24e05b0_0 .net *"_s5", 0 0, L_0x24e3b30; 1 drivers
+v0x24e0470_0 .net *"_s6", 0 0, L_0x24e3c60; 1 drivers
+v0x24e0700_0 .net *"_s8", 0 0, L_0x24e3cc0; 1 drivers
+v0x24e0820_0 .alias "signal", 1 0, v0x24e2370_0;
+v0x24e08a0_0 .alias "x1", 0 0, v0x24e1eb0_0;
+v0x24e0780_0 .alias "x2", 0 0, v0x24e1f30_0;
+v0x24e09d0_0 .alias "x3", 0 0, v0x24e25d0_0;
+L_0x24e3a30 .part v0x24e2bc0_0, 0, 1;
+L_0x24e3b30 .part v0x24e2bc0_0, 1, 1;
+L_0x24e3ec0 .part v0x24e2bc0_0, 0, 1;
+L_0x24e3f60 .part v0x24e2bc0_0, 1, 1;
+L_0x24e4440 .part v0x24e2bc0_0, 0, 1;
+L_0x24e4590 .part v0x24e2bc0_0, 1, 1;
+    .scope S_0x24ab040;
+T_0 ;
+    %vpi_call 2 80 "$dumpfile", "onebitalu.vcd";
+    %vpi_call 2 81 "$dumpvars", 1'sb0, S_0x24ab040;
+    %vpi_call 2 83 "$display", "A  B  Ainvert  Binvert  Carry_In  Operation  Carry_Out  Result  Zero  Set_greater_than\012";
+    %delay 0, 0;
+    %set/v v0x24e2550_0, 0, 1;
+    %set/v v0x24e2880_0, 0, 1;
+    %set/v v0x24e27b0_0, 0, 1;
+    %set/v v0x24e2950_0, 0, 1;
+    %set/v v0x24e2a20_0, 0, 1;
+    %set/v v0x24e2bc0_0, 0, 2;
+    %delay 10, 0;
+    %set/v v0x24e2550_0, 0, 1;
+    %set/v v0x24e2880_0, 1, 1;
+    %set/v v0x24e27b0_0, 0, 1;
+    %set/v v0x24e2950_0, 0, 1;
+    %set/v v0x24e2a20_0, 0, 1;
+    %movi 8, 1, 2;
+    %set/v v0x24e2bc0_0, 8, 2;
+    %delay 10, 0;
+    %set/v v0x24e2550_0, 0, 1;
+    %set/v v0x24e2880_0, 1, 1;
+    %set/v v0x24e27b0_0, 0, 1;
+    %set/v v0x24e2950_0, 0, 1;
+    %set/v v0x24e2a20_0, 0, 1;
+    %movi 8, 2, 2;
+    %set/v v0x24e2bc0_0, 8, 2;
+    %delay 10, 0;
+    %set/v v0x24e2550_0, 1, 1;
+    %set/v v0x24e2880_0, 1, 1;
+    %set/v v0x24e27b0_0, 0, 1;
+    %set/v v0x24e2950_0, 1, 1;
+    %set/v v0x24e2a20_0, 1, 1;
+    %movi 8, 2, 2;
+    %set/v v0x24e2bc0_0, 8, 2;
+    %delay 10, 0;
+    %set/v v0x24e2550_0, 1, 1;
+    %set/v v0x24e2880_0, 0, 1;
+    %set/v v0x24e27b0_0, 0, 1;
+    %set/v v0x24e2950_0, 1, 1;
+    %set/v v0x24e2a20_0, 1, 1;
+    %movi 8, 2, 2;
+    %set/v v0x24e2bc0_0, 8, 2;
+    %delay 10, 0;
+    %set/v v0x24e2550_0, 1, 1;
+    %set/v v0x24e2880_0, 1, 1;
+    %set/v v0x24e27b0_0, 0, 1;
+    %set/v v0x24e2950_0, 0, 1;
+    %set/v v0x24e2a20_0, 0, 1;
+    %movi 8, 2, 2;
+    %set/v v0x24e2bc0_0, 8, 2;
+    %delay 10, 0;
+    %set/v v0x24e2550_0, 1, 1;
+    %set/v v0x24e2880_0, 1, 1;
+    %set/v v0x24e27b0_0, 0, 1;
+    %set/v v0x24e2950_0, 0, 1;
+    %set/v v0x24e2a20_0, 0, 1;
+    %set/v v0x24e2bc0_0, 0, 2;
+    %delay 10, 0;
+    %set/v v0x24e2550_0, 0, 1;
+    %set/v v0x24e2880_0, 1, 1;
+    %set/v v0x24e27b0_0, 1, 1;
+    %set/v v0x24e2950_0, 1, 1;
+    %set/v v0x24e2a20_0, 0, 1;
+    %movi 8, 1, 2;
+    %set/v v0x24e2bc0_0, 8, 2;
+    %delay 10, 0;
+    %set/v v0x24e2550_0, 0, 1;
+    %set/v v0x24e2880_0, 0, 1;
+    %set/v v0x24e27b0_0, 1, 1;
+    %set/v v0x24e2950_0, 1, 1;
+    %set/v v0x24e2a20_0, 0, 1;
+    %set/v v0x24e2bc0_0, 0, 2;
+    %delay 10, 0;
+    %set/v v0x24e2550_0, 1, 1;
+    %set/v v0x24e2880_0, 1, 1;
+    %set/v v0x24e27b0_0, 0, 1;
+    %set/v v0x24e2950_0, 0, 1;
+    %set/v v0x24e2a20_0, 0, 1;
+    %movi 8, 2, 2;
+    %set/v v0x24e2bc0_0, 8, 2;
+    %delay 10, 0;
+    %set/v v0x24e2550_0, 1, 1;
+    %set/v v0x24e2880_0, 1, 1;
+    %set/v v0x24e27b0_0, 0, 1;
+    %set/v v0x24e2950_0, 1, 1;
+    %set/v v0x24e2a20_0, 1, 1;
+    %movi 8, 2, 2;
+    %set/v v0x24e2bc0_0, 8, 2;
+    %delay 10, 0;
+    %set/v v0x24e2550_0, 1, 1;
+    %set/v v0x24e2880_0, 0, 1;
+    %set/v v0x24e27b0_0, 0, 1;
+    %set/v v0x24e2950_0, 1, 1;
+    %set/v v0x24e2a20_0, 1, 1;
+    %movi 8, 2, 2;
+    %set/v v0x24e2bc0_0, 8, 2;
+    %delay 10, 0;
+    %end;
+    .thread T_0;
+    .scope S_0x24ab040;
+T_1 ;
+    %vpi_call 2 103 "$monitor", "%d  %d     %d        %d        %d         %2b          %d        %d      %d          %d", v0x24e2550_0, v0x24e2880_0, v0x24e27b0_0, v0x24e2950_0, v0x24e2a20_0, v0x24e2bc0_0, v0x24e2af0_0, v0x24e2c90_0, v0x24e2e30_0, v0x24e2db0_0;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "onebitalu.v";

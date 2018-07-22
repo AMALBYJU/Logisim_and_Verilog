@@ -1,0 +1,8 @@
+Implementation of simple circuit in verilog
+
+1. circuit_diagram.png - Pictorial representation of circuit
+2. circuit.v - Contains module that represents the simple circuit
+3. t_circuit.v - test file for module in circuit.v
+
+
+

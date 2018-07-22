@@ -1,0 +1,569 @@
+$date
+	Sun Jul 15 06:46:28 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module stimulus $end
+$var wire 2 ! finalfp [1:0] $end
+$var wire 2 " finaltp [1:0] $end
+$var reg 1 # clock $end
+$var reg 1 $ high $end
+$var integer 32 % i [31:0] $end
+$scope module uut $end
+$var wire 1 & clock $end
+$var wire 1 ' high $end
+$var wire 4 ( tempout [3:0] $end
+$var reg 2 ) finalfp [1:0] $end
+$var reg 2 * finaltp [1:0] $end
+$scope module c1 $end
+$var wire 1 & clock $end
+$var wire 1 ' high $end
+$var reg 1 + one $end
+$var reg 1 , or1 $end
+$var reg 1 - row1 $end
+$var reg 1 . row2 $end
+$var reg 1 / row3 $end
+$var reg 1 0 row4 $end
+$scope module t1 $end
+$var wire 1 & clock $end
+$var wire 1 1 enable $end
+$var wire 1 2 t $end
+$var reg 1 3 q $end
+$var reg 1 4 q1 $end
+$upscope $end
+$scope module t2 $end
+$var wire 1 & clock $end
+$var wire 1 1 enable $end
+$var wire 1 5 t $end
+$var reg 1 6 q $end
+$var reg 1 7 q1 $end
+$upscope $end
+$scope module t3 $end
+$var wire 1 & clock $end
+$var wire 1 1 enable $end
+$var wire 1 8 t $end
+$var reg 1 9 q $end
+$var reg 1 : q1 $end
+$upscope $end
+$scope module t4 $end
+$var wire 1 & clock $end
+$var wire 1 1 enable $end
+$var wire 1 ; t $end
+$var reg 1 < q $end
+$var reg 1 = q1 $end
+$upscope $end
+$upscope $end
+$scope module m1 $end
+$var wire 1 & clock $end
+$var wire 1 > rowd $end
+$var reg 1 ? frompeg0 $end
+$var reg 1 @ frompeg1 $end
+$var reg 1 A topeg0 $end
+$var reg 1 B topeg1 $end
+$scope module d1 $end
+$var wire 1 C adj $end
+$var wire 1 & clock $end
+$var wire 1 D d $end
+$var wire 1 > enable $end
+$var reg 1 E q $end
+$var reg 1 F q1 $end
+$upscope $end
+$scope module d2 $end
+$var wire 1 G adj $end
+$var wire 1 & clock $end
+$var wire 1 H d $end
+$var wire 1 > enable $end
+$var reg 1 I q $end
+$var reg 1 J q1 $end
+$upscope $end
+$scope module d3 $end
+$var wire 1 K adj $end
+$var wire 1 & clock $end
+$var wire 1 L d $end
+$var wire 1 > enable $end
+$var reg 1 M q $end
+$var reg 1 N q1 $end
+$upscope $end
+$scope module d4 $end
+$var wire 1 O adj $end
+$var wire 1 & clock $end
+$var wire 1 P d $end
+$var wire 1 > enable $end
+$var reg 1 Q q $end
+$var reg 1 R q1 $end
+$upscope $end
+$upscope $end
+$scope module m2 $end
+$var wire 1 & clock $end
+$var wire 1 S rowd $end
+$var reg 1 T frompeg0 $end
+$var reg 1 U frompeg1 $end
+$var reg 1 V topeg0 $end
+$var reg 1 W topeg1 $end
+$scope module d1 $end
+$var wire 1 X adj $end
+$var wire 1 & clock $end
+$var wire 1 Y d $end
+$var wire 1 S enable $end
+$var reg 1 Z q $end
+$var reg 1 [ q1 $end
+$upscope $end
+$scope module d2 $end
+$var wire 1 \ adj $end
+$var wire 1 & clock $end
+$var wire 1 ] d $end
+$var wire 1 S enable $end
+$var reg 1 ^ q $end
+$var reg 1 _ q1 $end
+$upscope $end
+$scope module d3 $end
+$var wire 1 ` adj $end
+$var wire 1 & clock $end
+$var wire 1 a d $end
+$var wire 1 S enable $end
+$var reg 1 b q $end
+$var reg 1 c q1 $end
+$upscope $end
+$scope module d4 $end
+$var wire 1 d adj $end
+$var wire 1 & clock $end
+$var wire 1 e d $end
+$var wire 1 S enable $end
+$var reg 1 f q $end
+$var reg 1 g q1 $end
+$upscope $end
+$upscope $end
+$scope module m3 $end
+$var wire 1 & clock $end
+$var wire 1 h rowd $end
+$var reg 1 i frompeg0 $end
+$var reg 1 j frompeg1 $end
+$var reg 1 k topeg0 $end
+$var reg 1 l topeg1 $end
+$scope module d1 $end
+$var wire 1 m adj $end
+$var wire 1 & clock $end
+$var wire 1 n d $end
+$var wire 1 h enable $end
+$var reg 1 o q $end
+$var reg 1 p q1 $end
+$upscope $end
+$scope module d2 $end
+$var wire 1 q adj $end
+$var wire 1 & clock $end
+$var wire 1 r d $end
+$var wire 1 h enable $end
+$var reg 1 s q $end
+$var reg 1 t q1 $end
+$upscope $end
+$scope module d3 $end
+$var wire 1 u adj $end
+$var wire 1 & clock $end
+$var wire 1 v d $end
+$var wire 1 h enable $end
+$var reg 1 w q $end
+$var reg 1 x q1 $end
+$upscope $end
+$scope module d4 $end
+$var wire 1 y adj $end
+$var wire 1 & clock $end
+$var wire 1 z d $end
+$var wire 1 h enable $end
+$var reg 1 { q $end
+$var reg 1 | q1 $end
+$upscope $end
+$upscope $end
+$scope module m4 $end
+$var wire 1 & clock $end
+$var wire 1 } rowd $end
+$var reg 1 ~ frompeg0 $end
+$var reg 1 !" frompeg1 $end
+$var reg 1 "" topeg0 $end
+$var reg 1 #" topeg1 $end
+$scope module d1 $end
+$var wire 1 $" adj $end
+$var wire 1 & clock $end
+$var wire 1 %" d $end
+$var wire 1 } enable $end
+$var reg 1 &" q $end
+$var reg 1 '" q1 $end
+$upscope $end
+$scope module d2 $end
+$var wire 1 (" adj $end
+$var wire 1 & clock $end
+$var wire 1 )" d $end
+$var wire 1 } enable $end
+$var reg 1 *" q $end
+$var reg 1 +" q1 $end
+$upscope $end
+$scope module d3 $end
+$var wire 1 ," adj $end
+$var wire 1 & clock $end
+$var wire 1 -" d $end
+$var wire 1 } enable $end
+$var reg 1 ." q $end
+$var reg 1 /" q1 $end
+$upscope $end
+$scope module d4 $end
+$var wire 1 0" adj $end
+$var wire 1 & clock $end
+$var wire 1 1" d $end
+$var wire 1 } enable $end
+$var reg 1 2" q $end
+$var reg 1 3" q1 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x3"
+02"
+11"
+00"
+x/"
+1."
+1-"
+1,"
+x+"
+1*"
+1)"
+1("
+x'"
+1&"
+0%"
+1$"
+0#"
+0""
+0!"
+0~
+0}
+x|
+0{
+1z
+0y
+xx
+1w
+1v
+1u
+xt
+1s
+1r
+1q
+xp
+1o
+0n
+1m
+0l
+0k
+0j
+0i
+0h
+xg
+0f
+1e
+0d
+xc
+1b
+1a
+1`
+x_
+1^
+0]
+1\
+x[
+0Z
+1Y
+0X
+0W
+0V
+0U
+0T
+0S
+xR
+0Q
+1P
+0O
+xN
+1M
+1L
+1K
+xJ
+1I
+1H
+1G
+xF
+1E
+0D
+1C
+0B
+0A
+0@
+0?
+0>
+1=
+0<
+0;
+1:
+09
+08
+17
+06
+05
+14
+03
+12
+11
+00
+0/
+0.
+0-
+1,
+1+
+b0 *
+b0 )
+b0 (
+1'
+0&
+b0 %
+1$
+0#
+b0 "
+b0 !
+$end
+#10000
+b1 !
+b1 )
+b11 *
+b11 "
+1?
+1A
+1B
+1>
+1-
+b1 (
+15
+04
+13
+b1 %
+1#
+1&
+#20000
+b10 %
+0#
+0&
+#30000
+1T
+1W
+1S
+0?
+0B
+1.
+0>
+b1 )
+b1 !
+b10 "
+b10 *
+0-
+b10 (
+0L
+0H
+1D
+0@
+0A
+08
+05
+1Q
+0E
+07
+16
+14
+03
+b11 %
+1#
+1&
+#40000
+b100 %
+0#
+0&
+#50000
+0W
+0S
+1?
+1@
+1B
+0.
+1>
+1-
+b1 (
+18
+b11 )
+b11 !
+b10 "
+b10 *
+15
+0T
+0U
+0V
+0a
+1]
+04
+13
+1Z
+0^
+1f
+b101 %
+1#
+1&
+#60000
+b110 %
+0#
+0&
+#70000
+1i
+1k
+1l
+1h
+1/
+0@
+0>
+b1 !
+b1 )
+b11 *
+b11 "
+0-
+b100 (
+0P
+1L
+1H
+0?
+0A
+0B
+0;
+08
+05
+1Q
+0M
+0I
+1E
+0:
+19
+17
+06
+14
+03
+b111 %
+1#
+1&
+#80000
+b1000 %
+0#
+0&
+#90000
+0i
+0l
+0h
+0/
+1@
+1A
+1>
+1-
+b1 (
+b10 )
+b10 !
+b1 "
+b1 *
+15
+0v
+0r
+1n
+0j
+0k
+04
+13
+0o
+1{
+b1001 %
+1#
+1&
+#100000
+b1010 %
+0#
+0&
+#110000
+1U
+1V
+1W
+1S
+0A
+1.
+0>
+b10 )
+b10 !
+b11 *
+b11 "
+0-
+b10 (
+0;
+1P
+0D
+0?
+0@
+0B
+08
+05
+0Q
+1M
+1I
+07
+16
+14
+03
+b1011 %
+1#
+1&
+#120000
+b1100 %
+0#
+0&
+#130000
+0U
+0V
+0S
+1?
+1A
+1B
+0.
+1;
+1>
+1-
+b1 (
+18
+b1 !
+b1 )
+b11 *
+b11 "
+15
+0T
+0W
+0e
+1a
+0Y
+04
+13
+1Z
+1^
+0b
+1f
+b1101 %
+1#
+1&
+#140000
+b1110 %
+0#
+0&

@@ -1,0 +1,108 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1825e00 .scope module, "stimulus" "stimulus" 2 18;
+ .timescale 0 0;
+v0x1861970_0 .net "_q", 0 0, L_0x1862930; 1 drivers
+v0x1861a10_0 .var "clear", 0 0;
+v0x1861ac0_0 .var "clk", 0 0;
+v0x1861b70_0 .var "j", 0 0;
+v0x1861c50_0 .var "k", 0 0;
+v0x1861d00_0 .net "q", 0 0, L_0x18626c0; 1 drivers
+E_0x1826150 .event negedge, v0x18612c0_0;
+S_0x1838ad0 .scope module, "uut" "jkflipflop" 2 27, 2 1, S_0x1825e00;
+ .timescale 0 0;
+L_0x1860e30 .functor AND 1, v0x1861b70_0, v0x1861ac0_0, C4<1>, C4<1>;
+L_0x1861e00 .functor AND 1, L_0x1860e30, L_0x1862930, C4<1>, C4<1>;
+L_0x1861f00 .functor NOT 1, L_0x1861e00, C4<0>, C4<0>, C4<0>;
+L_0x1861fb0 .functor AND 1, v0x1861c50_0, v0x1861ac0_0, C4<1>, C4<1>;
+L_0x1862060 .functor AND 1, L_0x1861fb0, L_0x18626c0, C4<1>, C4<1>;
+L_0x1862160 .functor NOT 1, L_0x1862060, C4<0>, C4<0>, C4<0>;
+L_0x1862250 .functor NOT 1, v0x1861ac0_0, C4<0>, C4<0>, C4<0>;
+L_0x1862340 .functor AND 1, L_0x1862250, L_0x1862b60, C4<1>, C4<1>;
+L_0x18623f0 .functor NOT 1, L_0x1862340, C4<0>, C4<0>, C4<0>;
+L_0x18624a0 .functor NOT 1, v0x1861ac0_0, C4<0>, C4<0>, C4<0>;
+L_0x1862560 .functor AND 1, L_0x18624a0, L_0x1862c60, C4<1>, C4<1>;
+L_0x18625c0 .functor NOT 1, L_0x1862560, C4<0>, C4<0>, C4<0>;
+L_0x1862500 .functor AND 1, L_0x18623f0, L_0x1862930, C4<1>, C4<1>;
+L_0x18626c0 .functor NOT 1, L_0x1862500, C4<0>, C4<0>, C4<0>;
+L_0x18627f0 .functor AND 1, L_0x18625c0, L_0x18626c0, C4<1>, C4<1>;
+L_0x1862930 .functor NOT 1, L_0x18627f0, C4<0>, C4<0>, C4<0>;
+L_0x1862ab0 .functor AND 1, L_0x1861f00, L_0x1862c60, C4<1>, C4<1>;
+L_0x1862b60 .functor NOT 1, L_0x1862ab0, C4<0>, C4<0>, C4<0>;
+L_0x1862a20 .functor AND 1, L_0x1862160, L_0x1862b60, C4<1>, C4<1>;
+L_0x1862d50 .functor AND 1, L_0x1862a20, v0x1861a10_0, C4<1>, C4<1>;
+L_0x1862c60 .functor NOT 1, L_0x1862d50, C4<0>, C4<0>, C4<0>;
+v0x1814360_0 .alias "_q", 0 0, v0x1861970_0;
+v0x1860810_0 .net *"_s0", 0 0, L_0x1860e30; 1 drivers
+v0x18608b0_0 .net *"_s12", 0 0, L_0x1862250; 1 drivers
+v0x1860950_0 .net *"_s14", 0 0, L_0x1862340; 1 drivers
+v0x1860a00_0 .net *"_s18", 0 0, L_0x18624a0; 1 drivers
+v0x1860aa0_0 .net *"_s2", 0 0, L_0x1861e00; 1 drivers
+v0x1860b80_0 .net *"_s20", 0 0, L_0x1862560; 1 drivers
+v0x1860c20_0 .net *"_s24", 0 0, L_0x1862500; 1 drivers
+v0x1860d10_0 .net *"_s28", 0 0, L_0x18627f0; 1 drivers
+v0x1860db0_0 .net *"_s32", 0 0, L_0x1862ab0; 1 drivers
+v0x1860eb0_0 .net *"_s36", 0 0, L_0x1862a20; 1 drivers
+v0x1860f50_0 .net *"_s38", 0 0, L_0x1862d50; 1 drivers
+v0x1861060_0 .net *"_s6", 0 0, L_0x1861fb0; 1 drivers
+v0x1861100_0 .net *"_s8", 0 0, L_0x1862060; 1 drivers
+v0x1861220_0 .net "clear", 0 0, v0x1861a10_0; 1 drivers
+v0x18612c0_0 .net "clk", 0 0, v0x1861ac0_0; 1 drivers
+v0x1861180_0 .net "j", 0 0, v0x1861b70_0; 1 drivers
+v0x1861410_0 .net "k", 0 0, v0x1861c50_0; 1 drivers
+v0x1861530_0 .alias "q", 0 0, v0x1861d00_0;
+v0x18615b0_0 .net "s", 0 0, L_0x1861f00; 1 drivers
+v0x1861490_0 .net "t", 0 0, L_0x1862160; 1 drivers
+v0x18616e0_0 .net "u", 0 0, L_0x1862b60; 1 drivers
+v0x1861630_0 .net "v", 0 0, L_0x1862c60; 1 drivers
+v0x1861820_0 .net "w", 0 0, L_0x18623f0; 1 drivers
+v0x1861780_0 .net "x", 0 0, L_0x18625c0; 1 drivers
+    .scope S_0x1825e00;
+T_0 ;
+    %vpi_call 2 31 "$display", "J  K  clk q  ~q\012";
+    %delay 0, 0;
+    %set/v v0x1861b70_0, 0, 1;
+    %set/v v0x1861c50_0, 0, 1;
+    %set/v v0x1861ac0_0, 0, 1;
+    %set/v v0x1861a10_0, 0, 1;
+    %delay 10, 0;
+    %set/v v0x1861b70_0, 1, 1;
+    %set/v v0x1861ac0_0, 1, 1;
+    %set/v v0x1861a10_0, 1, 1;
+    %delay 10, 0;
+    %set/v v0x1861ac0_0, 0, 1;
+    %delay 10, 0;
+    %set/v v0x1861c50_0, 1, 1;
+    %set/v v0x1861b70_0, 0, 1;
+    %set/v v0x1861ac0_0, 1, 1;
+    %delay 10, 0;
+    %set/v v0x1861b70_0, 0, 1;
+    %set/v v0x1861c50_0, 0, 1;
+    %set/v v0x1861ac0_0, 0, 1;
+    %delay 10, 0;
+    %set/v v0x1861b70_0, 1, 1;
+    %set/v v0x1861ac0_0, 1, 1;
+    %delay 10, 0;
+    %set/v v0x1861ac0_0, 0, 1;
+    %delay 10, 0;
+    %set/v v0x1861c50_0, 1, 1;
+    %set/v v0x1861b70_0, 0, 1;
+    %set/v v0x1861ac0_0, 1, 1;
+    %delay 10, 0;
+    %end;
+    .thread T_0;
+    .scope S_0x1825e00;
+T_1 ;
+    %wait E_0x1826150;
+    %vpi_call 2 47 "$display", "%d  %d  %d  %d  %d", v0x1861b70_0, v0x1861c50_0, v0x1861ac0_0, v0x1861d00_0, v0x1861970_0;
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "edge_triggered_jkflipflop.v";

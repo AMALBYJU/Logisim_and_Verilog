@@ -1,0 +1,225 @@
+$date
+	Mon Oct 30 22:27:56 2017
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module stimulus $end
+$var wire 1 ! carryout $end
+$var wire 1 " result $end
+$var wire 1 # sgt $end
+$var wire 1 $ zero $end
+$var reg 1 % a $end
+$var reg 1 & ainv $end
+$var reg 1 ' b $end
+$var reg 1 ( binv $end
+$var reg 1 ) carryin $end
+$var reg 2 * operation [1:0] $end
+$scope module uut $end
+$var wire 1 + A $end
+$var wire 1 , B $end
+$var wire 1 - a $end
+$var wire 1 . a_and_b $end
+$var wire 1 / a_or_b $end
+$var wire 1 0 ainv $end
+$var wire 1 1 b $end
+$var wire 1 2 binv $end
+$var wire 1 3 carryin $end
+$var wire 1 ! carryout $end
+$var wire 2 4 operation [1:0] $end
+$var wire 1 " result $end
+$var wire 1 # sgt $end
+$var wire 1 5 sum $end
+$var wire 1 $ zero $end
+$scope module f $end
+$var wire 1 + A $end
+$var wire 1 , B $end
+$var wire 1 3 carryin $end
+$var wire 1 ! carryout $end
+$var wire 1 5 sum $end
+$upscope $end
+$scope module m1 $end
+$var wire 1 + OUTPUT $end
+$var wire 1 0 signal $end
+$var wire 1 - x $end
+$var wire 1 6 y $end
+$upscope $end
+$scope module m2 $end
+$var wire 1 , OUTPUT $end
+$var wire 1 2 signal $end
+$var wire 1 1 x $end
+$var wire 1 7 y $end
+$upscope $end
+$scope module M $end
+$var wire 1 " OUTPUT $end
+$var wire 2 8 signal [1:0] $end
+$var wire 1 . x1 $end
+$var wire 1 / x2 $end
+$var wire 1 5 x3 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 8
+17
+16
+05
+b0 4
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+b0 *
+0)
+0(
+0'
+0&
+0%
+1$
+0#
+0"
+0!
+$end
+#10
+0$
+1"
+15
+1/
+1,
+07
+b1 *
+b1 4
+b1 8
+1'
+11
+#20
+b10 *
+b10 4
+b10 8
+#30
+1$
+0"
+0,
+0.
+1!
+1+
+05
+06
+1)
+13
+1(
+12
+1%
+1-
+#40
+0$
+1"
+15
+1.
+1,
+1#
+17
+0'
+01
+#50
+1$
+1!
+0"
+1.
+1,
+0#
+05
+07
+0)
+03
+0(
+02
+1'
+11
+#60
+0$
+1"
+b0 *
+b0 4
+b0 8
+#70
+0!
+15
+0.
+0,
+16
+b1 *
+b1 4
+b1 8
+1(
+12
+1&
+10
+0%
+0-
+#80
+0$
+1"
+1!
+05
+1.
+1,
+17
+b0 *
+b0 4
+b0 8
+0'
+01
+#90
+1$
+0"
+1!
+1/
+1.
+1,
+1+
+07
+06
+0#
+b10 *
+b10 4
+b10 8
+0(
+02
+0&
+00
+1'
+11
+1%
+1-
+#100
+1$
+0.
+0"
+0,
+05
+1)
+13
+1(
+12
+#110
+0$
+1"
+15
+1.
+1,
+1#
+17
+0'
+01
+#120

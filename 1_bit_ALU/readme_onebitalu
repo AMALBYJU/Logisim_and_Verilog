@@ -1,0 +1,21 @@
+                                                                ONE BIT ALU
+                                                                
+This is a verilog implementation of a 1 bit ALU that can perform the following logical and arithmetic operations - AND,OR,NOR,NAND,ADD and SUBTRACT. There are 2 additional flags -
+
+ 1. Flag to check whether the result of the ALU operation is zero
+ 2. Flag to check whether the first input is greater than the second input.
+ 
+
+The ALU inputs must fit one the following combinations: 
+
+ 
+ ainv  binv  carryin operation   
+ 
+  0     0      X        00     -- AND  
+  0     0      X        01     -- OR
+  1     1      X        00     -- NOR
+  1     1      X        01     -- NAND
+  0     0      0        00     -- ADD
+  0     1      1        00     -- SUBTRACT
+  
+ 
